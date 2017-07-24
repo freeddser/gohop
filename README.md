@@ -1,3 +1,20 @@
+
+1.On server intance RUN:
+sysctl net.ipv4.ip_forward=1
+iptables -t nat -A POSTROUTING -j MASQUERADE
+sudo ./binary/ubuntu16-gohop server.ini
+
+2.On client intance RUN:
+sudo ./binary/ubuntu16-gohop client.ini
+
+if not working?
+need change  /etc/resolv.conf:
+nameserver 8.8.8.8
+nameserver 8.8.4.4
+
+
+
+
 GoHop
 =====
 GoHop is a VPN implemented in golang, with innate encryption and obfuscation. The goal of this project is to escape from censorship and
