@@ -25,7 +25,8 @@ import (
 	"runtime"
 
 	"github.com/bigeagle/gohop/hop"
-	. "github.com/bigeagle/gohop/internal"
+	//. "github.com/bigeagle/gohop/internal"
+	. "./internal"
 )
 
 var srvMode, cltMode, debug, getVersion bool
